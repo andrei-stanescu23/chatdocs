@@ -1,8 +1,8 @@
-<title>ChatDocs</title>
+<title>CryptoData AI Chat</title>
 
 <script>
   const auth = new URLSearchParams(window.location.search).get('auth');
-  const ws = new WebSocket(`ws://${location.host}/ws`);
+  const ws = new WebSocket(`wss://${location.host}/ws`);
 
   ws.addEventListener('message', (event) => {
     data = JSON.parse(event.data);
